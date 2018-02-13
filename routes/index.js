@@ -48,7 +48,7 @@ router.post('/webhook', (req, res) => {
       // will only ever contain one message, so we get index 0
       let webhook_event = entry.messaging[0];
       console.log(webhook_event);
-      chatService.receivedMessage(webhook_event)
+      chatService.receivedMessagePerso(webhook_event)
     });
 
     // Returns a '200 OK' response to all requests

@@ -31,7 +31,7 @@ function receivedMessage(event) {
         sendGenericMessage(senderID);
         break;
       default:
-        sendTextMessage(senderID, "Bonjour ton message contient "+messageText.length+" caractères");
+        sendTextMessage(senderID, "Bonjour ton identifiant Facebook est"+senderID+" et ton message contient "+messageText.length+" caractères");
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");

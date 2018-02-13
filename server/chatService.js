@@ -57,7 +57,7 @@ function receivedMessagePerso(event) {
         sendGenericMessage(senderID);
         break;
       default:
-        sendTextMessage(senderID,"Ton message comporte "+string(messageText.length)+" caractères!");
+        sendTextMessage(senderID,"Ton message comporte " + messageText.length + " caractères!");
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");

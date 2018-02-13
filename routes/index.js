@@ -31,6 +31,7 @@ router.get('/webhook', (req, res) => {
       res.sendStatus(403);
     }
   }
+  res.sendStatus(200);
 });
 
 // Creates the endpoint for our webhook

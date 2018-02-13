@@ -36,7 +36,6 @@ router.get('/webhook', (req, res) => {
 
 // Creates the endpoint for our webhook
 router.post('/webhook', (req, res) => {
-  chatService.sendTextMessage('1600900129946862', 'coucou')
   let body = req.body;
 
   // Checks this is an event from a page subscription
@@ -49,6 +48,7 @@ router.post('/webhook', (req, res) => {
       // will only ever contain one message, so we get index 0
       let webhook_event = entry.messaging[0];
       console.log(webhook_event);
+      chatService.receivedMessage(webhook_event)
     });
 
     // Returns a '200 OK' response to all requests

@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/webhook', (req, res) => {
-  chatService.sendTextMessage('1600900129946862', 'coucou')
+
   // Your verify token. Should be a random string.
   var VERIFY_TOKEN = "lfjkdsmqmldqfjspoiruetpmo";
 
@@ -36,7 +36,7 @@ router.get('/webhook', (req, res) => {
 
 // Creates the endpoint for our webhook
 router.post('/webhook', (req, res) => {
-
+  chatService.sendTextMessage('1600900129946862', 'coucou')
   let body = req.body;
 
   // Checks this is an event from a page subscription

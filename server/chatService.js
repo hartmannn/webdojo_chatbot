@@ -58,7 +58,8 @@ function receivedMessagePerso2(event) {
         break;
       default:
         sendTextMessage(senderID, messageText);
-        console.log("Nombre de caractères :"+messageText.length);
+        console.log("lu!");
+        break;
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");

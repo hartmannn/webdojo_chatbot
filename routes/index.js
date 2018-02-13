@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-
+var chatService = require('../server/chatService')
 /* GET hello world page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
 
 router.get('/webhook', (req, res) => {
-
+  chatService.sendTextMessage('1600900129946862', 'coucou')
   // Your verify token. Should be a random string.
   var VERIFY_TOKEN = "lfjkdsmqmldqfjspoiruetpmo";
 
@@ -34,7 +34,7 @@ router.get('/webhook', (req, res) => {
 });
 
 // Creates the endpoint for our webhook
-router.post('/webhook', (req, res) => {  
+router.post('/webhook', (req, res) => {
 
   let body = req.body;
 

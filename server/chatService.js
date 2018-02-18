@@ -37,7 +37,7 @@ function receivedMessage(event) {
         sendTextMessage(senderID, messageText+" abruti!");
       }
       else {
-        addUser(senderID);
+        addUser(senderID,"enregistre");
         sendTextMessage(senderID, "Bienvenue, nouvel utilisateur!");
 
       }

@@ -14,6 +14,7 @@ const VALIDATION_TOKEN = (process.env.MESSENGER_VALIDATION_TOKEN) ?
 
 function receivedMessage(event) {
   var senderID = event.sender.id;
+  var userData=event.sender.data;
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;
   var message = event.message;
@@ -31,7 +32,7 @@ function receivedMessage(event) {
         sendGenericMessage(senderID);
         break;
       default:
-        sendTextMessage(senderID, "Bonjour ton identifiant Facebook est "+senderID+" et ton message contient "+messageText.length+" caractères");
+        sendTextMessage(senderID, messageText+" abruti!");
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");

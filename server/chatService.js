@@ -32,15 +32,7 @@ function receivedMessage(event) {
         sendGenericMessage(senderID);
         break;
       default:
-      if isUserKnown(senderID)
-      {
         sendTextMessage(senderID, messageText+" abruti!");
-      }
-      else {
-        addUser(senderID);
-        sendTextMessage(senderID, "Bienvenue, nouvel utilisateur!");
-
-      }
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");

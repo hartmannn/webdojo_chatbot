@@ -12,6 +12,8 @@ const VALIDATION_TOKEN = (process.env.MESSENGER_VALIDATION_TOKEN) ?
   (process.env.MESSENGER_VALIDATION_TOKEN) :
   config.get('validationToken');
 
+var suffixe=" abruti!"
+
 function receivedMessage(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
@@ -28,11 +30,12 @@ function receivedMessage(event) {
 
   if (messageText) {
     switch (messageText) {
-      case 'generic':
-        sendGenericMessage(senderID);
+      case 'Sois poli!':
+        sendTextMessage(senderID, "J'essairai la prochaine fois");
+        suffixe=" votre Altesse"
         break;
       default:
-        sendTextMessage(senderID, messageText+" abruti!");
+        sendTextMessage(senderID, messageText+suffixe);
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");

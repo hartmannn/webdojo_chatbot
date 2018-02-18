@@ -21,7 +21,7 @@ function receivedMessage(event) {
   console.log("Received message for user %d and page %d at %d with message:",
     senderID, recipientID, timeOfMessage);
   console.log(JSON.stringify(message));
-  console.log(userService.isUserKnown(senderID));
+  //console.log(userService.isUserKnown(senderID));
 
   var messageText = message.text;
   var messageAttachments = message.attachments;

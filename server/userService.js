@@ -10,8 +10,8 @@ function isUserKnown(senderId) {
   }
 }
 
-function addUser(senderId) {
-  db.push('/users/' + senderId,true)
+function addUser(senderId,userData) {
+  db.push('/users/' + senderId,userData)
 }
 
 function getUser(senderId) {

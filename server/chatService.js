@@ -14,7 +14,6 @@ const VALIDATION_TOKEN = (process.env.MESSENGER_VALIDATION_TOKEN) ?
 
 function receivedMessage(event) {
   var senderID = event.sender.id;
-  var userData=event.sender.data;
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;
   var message = event.message;

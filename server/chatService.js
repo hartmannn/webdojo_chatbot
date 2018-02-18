@@ -32,7 +32,11 @@ function receivedMessage(event) {
     switch (messageText) {
       case 'Sois poli!':
         sendTextMessage(senderID, "J'essairai la prochaine fois");
-        suffixe=" votre Altesse"
+        suffixe=" votre Altesse";
+        break;
+      case "empaffé!":
+        sendTextMessage(senderID, "Je crois que je viens de perdre ma bonne résolution...");
+        suffixe=" 'spèce de schtroumpf, et je suis poli!'";
         break;
       default:
         sendTextMessage(senderID, messageText+suffixe);
